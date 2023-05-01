@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import img1 from "./assets/1.png";
 import { FaCalendar } from "react-icons/fa";
-import { AuthContext } from "./Provider/Provider";
 
 const MoreNews = () => {
-  const {a}=useContext(AuthContext)
-  console.log(a)
   return (
     <div className="card  bg-base-100 shadow-xl mt-4">
       <figure>

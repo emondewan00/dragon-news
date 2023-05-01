@@ -6,9 +6,18 @@ import Ad from "./Ad";
 import { AuthContext } from "./Provider/Provider";
 
 const Login = () => {
-  const { loginWithGoogle } = useContext(AuthContext);
+  const { loginWithGoogle, githubLogin } = useContext(AuthContext);
   const googleLogin = () => {
     loginWithGoogle();
+  };
+  const githubLoginHandler = () => {
+    githubLogin()
+      .then((res) => {
+        console.log(res)
+      })
+      .then((err) => {
+        console.log(err)
+      });
   };
   return (
     <div className="space-y-3 mt-2">
@@ -24,6 +33,7 @@ const Login = () => {
       <button
         className="btn btn-outline btn-primary form-control
        w-full "
+        onClick={githubLoginHandler}
       >
         <span>
           <FaGithub className="inline me-2" /> Login with Github

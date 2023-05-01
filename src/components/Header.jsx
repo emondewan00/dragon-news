@@ -4,7 +4,7 @@ import moment from "moment/moment";
 import Marquee from "react-fast-marquee";
 const Header = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-4">
       <div className="text-center space-y-2">
         <img src={logo} className="mx-auto" alt="" />
         <p className="text-lg">Journalism Without Fear or Favour</p>
